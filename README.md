@@ -223,6 +223,12 @@ renderWindow.render();
 
 ## Implementation
 
+                                   --{{0}}--
+The code shows how the macros were implemented. For `@VTK.eval` and `.run` there
+are only basic substitution rules. In case of `@VTK.load` a hidden macro is
+defined, which is called in the background. It includes only one JavaScript tag
+that defines how the data from the URL resource gets loaded.
+
 ``` html
 script:   https://unpkg.com/vtk.js
 
@@ -323,3 +329,10 @@ reader
 
 @end
 ```
+
+--{{1}}--
+If you want to minimize loading effort in your LiaScript project, you can also
+copy this code and paste it into your main comment header, see the code in the
+raw file of this document.
+
+{{1}} https://raw.githubusercontent.com/liaScript/vtk_template/master/README.md
